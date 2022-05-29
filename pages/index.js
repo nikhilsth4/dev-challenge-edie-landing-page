@@ -5,6 +5,7 @@ import Contact from "../src/components/Contact"
 import Hero from "../src/components/Hero"
 import Navbar from "../src/components/Navbar"
 import Services from "../src/components/Services"
+import Team from "../src/components/Team"
 import Works from "../src/components/Works/Index"
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Works />
+      <Team />
       <Clients />
       <Contact />
     </Box>
