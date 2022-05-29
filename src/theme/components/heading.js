@@ -9,8 +9,8 @@ const heading = {
       lineHeight: ["36px", null, null, "72px"],
     },
     "4xl": {
-      fontSize: ["4xl", null, "4xl"],
-      lineHeight: "54px",
+      fontSize: ["2xl", null, null, "4xl"],
+      lineHeight: ["36px", null, null, "54px"],
     },
     "2xl": {
       fontSize: ["lg", null, "2xl"],

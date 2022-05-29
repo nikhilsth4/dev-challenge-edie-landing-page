@@ -6,39 +6,41 @@ import NextImage from "next/image"
 const Clients = () => {
   return (
     <Container>
-      <Heading as="h2" size="5xl">
-        “Fast and outstanding results. Edie understands their customer’s needs.
-        They have a young and talented team.”
-      </Heading>
-      <Flex mt={10} gap={4} align="center">
-        <Box
-          position="relative"
-          overflow="hidden"
-          borderRadius="12px"
-          height="62px"
-          width="62px"
-        >
-          <NextImage
-            src="/images/person4.png"
-            alt="Client image"
-            layout="fill"
-            objectFit="cover"
-          />
-        </Box>
-        <VStack align="flex-start">
-          <Text fontWeight={500} fontSize="xl" lineHeight="36px">
-            Carlos Tran
-          </Text>
-          <Text
-            fontWeight={500}
-            fontSize="lg"
-            lineHeight="27px"
-            color="gray.400"
+      <Box maxW={[null, null, null, "800px", "1106px"]} margin="auto">
+        <Heading as="h2" size="4xl" maxW="938px">
+          “Fast and outstanding results. Edie understands their customer’s
+          needs. They have a young and talented team.”
+        </Heading>
+        <Flex mt={10} gap={4} align="center">
+          <Box
+            position="relative"
+            overflow="hidden"
+            borderRadius="12px"
+            height="62px"
+            width="62px"
           >
-            The Decorate Gatsby
-          </Text>
-        </VStack>
-      </Flex>
+            <NextImage
+              src="/images/person4.png"
+              alt="Client image"
+              layout="fill"
+              objectFit="cover"
+            />
+          </Box>
+          <VStack align="flex-start">
+            <Text fontWeight={500} fontSize="xl" lineHeight="36px">
+              Carlos Tran
+            </Text>
+            <Text
+              fontWeight={500}
+              fontSize="lg"
+              lineHeight="27px"
+              color="gray.400"
+            >
+              The Decorate Gatsby
+            </Text>
+          </VStack>
+        </Flex>
+      </Box>
     </Container>
   )
 }

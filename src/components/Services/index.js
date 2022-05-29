@@ -6,14 +6,24 @@ import NextImage from "next/image"
 const Services = () => {
   return (
     <Container>
-      <Box maxW="272px" ml={8} mb={10}>
-        <Heading as="h2" size="5xl">
+      <Box
+        maxW={["272px", null, null, "346px"]}
+        ml={[8, null, null, 36]}
+        mb={10}
+      >
+        <Heading as="h2" size="4xl">
           We offer high <br /> demand services
         </Heading>
       </Box>
-      <Card title="UI/UX Design" color="primary" iconName="edit" />
-      <Card title="Frontend" color="green" iconName="arrow" />
-      <Card title="Backend" color="orange" iconName="storage" />
+      <Flex
+        flexDirection={["column", null, null, "row"]}
+        justify="center"
+        gap={[10, null, null, 20]}
+      >
+        <Card title="UI/UX Design" color="primary" iconName="edit" />
+        <Card title="Frontend" color="green" iconName="arrow" />
+        <Card title="Backend" color="orange" iconName="storage" />
+      </Flex>
     </Container>
   )
 }
@@ -24,14 +34,14 @@ const Card = ({ title, color, iconName }) => {
       pt={12}
       px={8}
       pb={10}
-      mb="78px"
       _hover={{
         cursor: "pointer",
         boxShadow: "0px 10px 30px rgba(51, 51, 51, 0.1)",
       }}
+      maxW="340px"
     >
       <CardIcon color={color} iconName={iconName} />
-      <Heading as="h2" size="5xl" fontWeight={700} mt={9}>
+      <Heading as="h2" fontSize="24px" fontWeight={700} mt={9}>
         {title}
       </Heading>
       <Text

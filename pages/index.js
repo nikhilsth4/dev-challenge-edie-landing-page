@@ -16,13 +16,15 @@ export default function Home() {
         <meta name="description" content="Edie home page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <Hero />
-      <Services />
-      <Works />
-      <Team />
-      <Clients />
-      <Contact />
+      <Box>
+        <Navbar />
+        <Hero />
+        <Services />
+        <Works />
+        <Team />
+        <Clients />
+        <Contact />
+      </Box>
     </Box>
   )
 }

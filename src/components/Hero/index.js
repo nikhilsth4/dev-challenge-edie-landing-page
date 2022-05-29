@@ -14,7 +14,13 @@ import NextImage from "next/image"
 export const InputWithBtn = () => {
   return (
     <>
-      <Text fontWeight="500" fontSize="10px" color="gray.300" lineHeight="15px">
+      <Text
+        fontWeight="500"
+        fontSize={["10px", null, null, "14px"]}
+        color="gray.300"
+        lineHeight={["15px", null, null, "21px"]}
+        mb={[null, null, null, 2]}
+      >
         Want us to contact you?
       </Text>
       <InputGroup>
@@ -57,9 +63,17 @@ export const InputWithBtn = () => {
 
 const Hero = () => {
   return (
-    <Box mt={24} mx={3}>
-      <Box maxW="272px" ml={8} mb={4}>
-        <Text color="primary" fontSize="12px" fontWeight={500}>
+    <Box mt={[24, null, null, 40]} mx={[3, null, null, 14]}>
+      <Box
+        maxW={["272px", null, null, "542px"]}
+        ml={[8, null, null, 64]}
+        mb={[4, null, null, 13]}
+      >
+        <Text
+          color="primary"
+          fontSize={["lg", null, null, "28px"]}
+          fontWeight={500}
+        >
           Unhappy with your website?
         </Text>
         <Heading as="h1" size="5xl">
@@ -68,7 +82,7 @@ const Hero = () => {
         </Heading>
       </Box>
       <Box
-        minH="146px"
+        minH={["146px", null, null, "354px"]}
         position="relative"
         overflow="hidden"
         borderRadius={"18px"}
@@ -81,16 +95,27 @@ const Hero = () => {
         />
       </Box>
 
-      <VStack spacing="6" maxW="272px" mt={6} ml={8} align="flex-start">
+      <VStack
+        spacing={[6, null, null, 7]}
+        maxW={["272px", null, null, "366px"]}
+        mt={[6, null, null, 10]}
+        ml={[8, null, null, 64]}
+        align="flex-start"
+      >
         <Heading as="h1" size="5xl">
           Story, emotion <br /> and purpose
         </Heading>
-        <Text color="gray.500" fontWeight="400" fontSize="xs" lineHeight="18px">
+        <Text
+          color="gray.500"
+          fontWeight="400"
+          fontSize={["xs", null, null, "18px"]}
+          lineHeight={["18px", null, null, "27px"]}
+        >
           We help transform your ideas into real world applications that will
           outperform your toughest competition and help you achieve your
           strategic goals in short period of time.
         </Text>
-        <Box>
+        <Box w="full">
           <InputWithBtn />
         </Box>
       </VStack>
