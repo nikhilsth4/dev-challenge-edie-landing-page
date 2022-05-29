@@ -1,8 +1,16 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react"
+import { Box, Flex, Heading, Link, Text, VStack } from "@chakra-ui/react"
 import React from "react"
 import NextImage from "next/image"
 import { InputWithBtn } from "../Hero"
+import NextLink from "next/link"
 
+const ContactLink = ({ href, name }) => (
+  <NextLink href={href} passHref>
+    <Link fontWeight={400} fontSize="18px" color="white" lineHeight="36px">
+      <>{name}</>
+    </Link>
+  </NextLink>
+)
 const Contact = () => {
   return (
     <Box mt="102px" bg="darkBlue" pt={[9]} pl={[10]} pb={6}>
@@ -13,21 +21,13 @@ const Contact = () => {
           justify={[null, null, null, "space-between"]}
         >
           <Box>
-            <Text fontWeight={400} fontSize="18px" color="white">
-              Home
-            </Text>
-            <Text fontWeight={400} fontSize="18px" color="white">
-              Services
-            </Text>
-            <Text fontWeight={400} fontSize="18px" color="white">
-              Our Works
-            </Text>
-            <Text fontWeight={400} fontSize="18px" color="white">
-              Client
-            </Text>
-            <Text fontWeight={400} fontSize="18px" color="white">
-              Contact
-            </Text>
+            <VStack align="flex-start" mt={2}>
+              <ContactLink href="/" name="Home" />
+              <ContactLink href="/" name="Services" />
+              <ContactLink href="/" name="Our Works" />
+              <ContactLink href="/" name="Clients" />
+              <ContactLink href="/" name="Contact" />
+            </VStack>
           </Box>
           <Box>
             <Heading
@@ -71,7 +71,11 @@ const Contact = () => {
           lineHeight="18px"
           align="center"
         >
-          created by username - devChallenges.io
+          created by
+          <NextLink href="https://github.com/nikhilsth4" passHref>
+            <Link isExternal> @nikhilsth4 </Link>
+          </NextLink>
+          - devChallenges.io
         </Text>
       </Box>
     </Box>
